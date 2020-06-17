@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Sign in{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for("static",filename="css/login_register.css") }}">
+{% endblock %}
+
+{% block main %}
+    <h3 class="page-title">Sign in</h3>
+    <form action="" method="POST">
+        <div class="form-container">
+            <div class="form-group">
+                <label for="loginInputEmail">Email address</label>
+                <input type="email" class="form-control" id="loginInputEmail" aria-describedby="emailHelp"
+                       placeholder="Email" name="email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
+            </div>
+            <div class="form-group">
+                <label for="loginInputEmail">Password</label>
+                <input type="password" class="form-control" id="loginInputPassword" placeholder="Password"
+                       name="password">
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="loginCheck" name="check">
+                <label class="form-check-label" for="loginCheck">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </div>
+    </form>
+{% endblock %}
